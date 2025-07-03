@@ -28,7 +28,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 广告点击
 - (void)unifiedNativeAdDidClick:(FTUnifiedNativeAd *)unifiedNativeAd;
 
-/// 广告落地页关闭
+/// 落地页即将关闭
+- (void)unifiedNativeAdLandingPageWillClose:(FTUnifiedNativeAd *)unifiedNativeAd;
+/// 落地页已经关闭
 - (void)unifiedNativeAdLandingPageDidClose:(FTUnifiedNativeAd *)unifiedNativeAd;
 
 @end
@@ -39,7 +41,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// 代码位id
 @property (nonatomic, copy, nonnull) NSString *slotId;
 
-@property (nonatomic, copy, nullable) NSDictionary *extInfo;
+@property (nonatomic, strong, nullable) NSDictionary *extInfo;
 
 @property (nonatomic, weak) id<FTUnifiedNativeAdDelegate> delegate;
 

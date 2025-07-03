@@ -43,7 +43,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 插屏广告视频播放完成或者报错.
 - (void)interstitialVideoAdDidPlayFinish:(FTInterstitialAd *)interstitialAd didFailWithError:(NSError *_Nullable)error;
-
+/// 落地页即将关闭
+- (void)interstitialAdLandingPageWillDisappear:(FTInterstitialAd *)interstitialAd;
+/// 落地页已经关闭
+- (void)interstitialAdLandingPageDidDisappear:(FTInterstitialAd *)interstitialAd;
 
 @end
 @interface FTInterstitialAd : NSObject<FTAdBidProtocol>
@@ -53,7 +56,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// 代码位id
 @property (nonatomic, copy, nonnull) NSString *slotId;
 
-@property (nonatomic, copy, nullable) NSDictionary *extInfo;
+@property (nonatomic, strong, nullable) NSDictionary *extInfo;
 
 @property (nonatomic, weak) id<FTInterstitialAdDelegate> delegate;
 
