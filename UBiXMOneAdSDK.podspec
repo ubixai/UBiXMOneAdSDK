@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'UBiXMOneAdSDK'
-  s.version          = '1.2.0.1'
+  s.version          = '3.0.0.5'
   s.summary          = 'OneAdSDK'
   s.homepage         = 'https://www.ubixai.com/product/md'
   # s.license          = { :type => 'MIT', :file => 'LICENSE' }
